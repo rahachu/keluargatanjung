@@ -764,8 +764,8 @@ $(function() {
             type: 'POST',
             contentType: false, 
             success: function (data) {
-                console.log(data);
-                // location.reload();
+                // console.log(data);
+                location.reload();
             }
         }).done();
         
