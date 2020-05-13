@@ -1,0 +1,12 @@
+.nav-pills > li > a.active {
+    background-color: #dc3545!important;
+    color: white!important;
+}
+
+.card-img-top {
+    overflow: hidden;
+}
+/* 
+.card-img-top img{
+
+} */
