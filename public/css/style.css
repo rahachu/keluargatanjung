@@ -1,4 +1,4 @@
-.nav-pills .nav-link.active, .nav-pills.show>.nav-link {
+.nav-pills > li > a.active {
     background-color: #dc3545!important;
     color: white!important;
 }
