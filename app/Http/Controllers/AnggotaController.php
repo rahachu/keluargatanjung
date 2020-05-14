@@ -30,12 +30,12 @@ class AnggotaController extends Controller
         // mendaftarkan anggota
         $input=$request->all();
         //mencoba menggunakan blob
-        $gambar=Image::make($input['file'])->resize(null,90,function($constraint){
-            $constraint->aspectRatio();
-        })->encode('png');
-        $input['gambar']=$gambar;
-        Avatar::create($input);
-        Anggota::create($input);
+        // $gambar=Image::make($input['file'])->resize(null,90,function($constraint){
+        //     $constraint->aspectRatio();
+        // })->encode('png');
+        // $input['gambar']=$gambar;
+        // Avatar::create($input);
+        // Anggota::create($input);
         // $gambar=$input['file'];
         // $gambar->move(public_path('avatar'),$input['panggilan'].'.png');
 
