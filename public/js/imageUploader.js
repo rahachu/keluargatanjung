@@ -769,7 +769,7 @@ $(function() {
             },
             error: function(){
                 location.reload();
-            },timeout:3000
+            },timeout:5000
         }).done();
         
     });
