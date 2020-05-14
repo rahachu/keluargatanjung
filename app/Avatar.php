@@ -8,5 +8,5 @@ class Avatar extends Model
 {
     //
     protected $table = "_avatar_";
-    protected $fillable = ['panggilan','x','y','newHeight','newWidth','originalHeight','originalWidth','zoom'];
+    protected $fillable = ['gambar','panggilan','x','y','newHeight','newWidth','originalHeight','originalWidth','zoom'];
 }

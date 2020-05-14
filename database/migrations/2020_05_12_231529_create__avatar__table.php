@@ -23,6 +23,7 @@ class CreateAvatarTable extends Migration
             $table->integer('originalHeight');
             $table->integer('originalWidth');
             $table->float('zoom');
+            $table->binary('gambar');
             $table->timestamps();
         });
     }

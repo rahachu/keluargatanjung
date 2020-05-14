@@ -69,7 +69,7 @@
           <div class="col-md-4 col-6 mt-4">
             <div class="card">
               <div class="card-img-top">
-                <img src={{url('/avatar').'/'.$a->panggilan.'.png'}} alt="Foto Profil" style="height:{{$avatars[$a->panggilan]['newHeight']}}%; width:{{$avatars[$a->panggilan]['newWidth']}}%; margin-top: {{$avatars[$a->panggilan]['y']}}%; margin-left: {{$avatars[$a->panggilan]['x']}}%">
+                <img src={{"data:image/png;base64,".$avatars[$a->panggilan]['gambar']}} alt="Foto Profil" style="height:{{$avatars[$a->panggilan]['newHeight']}}%; width:{{$avatars[$a->panggilan]['newWidth']}}%; margin-top: {{$avatars[$a->panggilan]['y']}}%; margin-left: {{$avatars[$a->panggilan]['x']}}%">
               </div>
               <div class="card-body">
                 <h3 class="card-text" style="font-size: 2.1vw">{{$a->panggilan}}</h3>
