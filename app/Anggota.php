@@ -11,7 +11,7 @@ class Anggota extends Model
     protected $primaryKey = 'panggilan';
     public $incrementing = false;
     protected $keyType = 'string';
-    protected $fillable = ['nama','panggilan','prodi'];
+    protected $fillable = ['nama','panggilan','prodi','profpic'];
     /**
      * Get the comments for the blog post.
      */

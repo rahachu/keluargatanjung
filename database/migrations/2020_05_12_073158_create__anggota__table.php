@@ -17,6 +17,7 @@ class CreateAnggotaTable extends Migration
             $table->char('nama');
             $table->char('panggilan',10)->unique();
             $table->string('prodi');
+            $table->mediumText('profpic');
             $table->timestamps();
         });
     }

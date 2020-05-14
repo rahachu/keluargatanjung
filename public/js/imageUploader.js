@@ -737,22 +737,8 @@ $(function() {
         e.preventDefault();
 
         formData = new FormData();
-        formData.append('file', data.file);
-        // Crop size ( Final image size )
-        formData.append('cropHeight', data.cropHeight);
-        formData.append('cropWidth', data.cropWidth);
-        // Image X and Y position
-        formData.append('x', data.x);
-        formData.append('y', data.y);
-        // New image size (the size needed to position the image)
-        formData.append('newWidth', data.width);
-        formData.append('newHeight', data.height);
-        // Zoom/Scale; 0.1 = 10%
-        formData.append('zoom', data.zoom);
-        // Original image size (if needed)
-        formData.append('originalWidth', data.originalWidth);
-        formData.append('originalHeight', data.originalHeight);
         //other data
+        formData.append('profpic',p.getAsDataURL());
         formData.append('nama', $("input[name=nama]").val());
         formData.append('panggilan', $("input[name=panggilan]").val());
         formData.append('prodi', $( "#prodi option:selected" ).text());
@@ -767,9 +753,9 @@ $(function() {
                 // console.log(data);
                 location.reload();
             },
-            error: function(){
-                location.reload();
-            },timeout:60000
+            // error: function(){
+            //     location.reload();
+            // },timeout:1000
         }).done();
         
     });
