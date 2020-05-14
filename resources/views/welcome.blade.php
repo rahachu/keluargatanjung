@@ -199,7 +199,9 @@
     <!-- Scroll Spy-->
     <script type="text/javascript">
       $('body').scrollspy({ target: '#main-navbar',offset: window.innerHeight*0.5})
-      $('body').scrollspy('refresh')
+      $('[data-spy="scroll"]').each(function () {
+        var $spy = $(this).scrollspy('refresh')
+      })
     </script>
   </body>
 </html>
