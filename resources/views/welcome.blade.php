@@ -98,6 +98,31 @@
 
 <!-- Modal -->
 <div class="modal fade" id="form-registrasi" tabindex="-1" role="dialog" aria-hidden="true">
+    <div id="loading0" class="spinner-grow text-primary" role="status" style='display:none'>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div id="loading1" class="spinner-grow text-secondary" role="status" style='display:none'>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div id="loading2" class="spinner-grow text-success" role="status" style='display:none'>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div id="loading3" class="spinner-grow text-danger" role="status" style='display:none'>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div id="loading4" class="spinner-grow text-warning" role="status" style='display:none'>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div id="loading5" class="spinner-grow text-info" role="status" style='display:none'>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div id="loading6" class="spinner-grow text-light" role="status" style='display:none'>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div id="loading7" class="spinner-grow text-dark" role="status" style='display:none'>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <h1 id="error-daftar" class="text-warning"></h1>
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -174,10 +199,6 @@
     <!-- Scroll Spy-->
     <script type="text/javascript">
       $('body').scrollspy({ target: '#main-navbar',offset: window.innerHeight*0.5})
-      $('body').scrollspy('refresh')
-      $('[data-spy="scroll"]').each(function () {
-        var $spy = $(this).scrollspy('refresh')
-      })
     </script>
   </body>
 </html>

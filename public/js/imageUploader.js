@@ -738,10 +738,25 @@ $(function() {
 
         formData = new FormData();
         //other data
-        formData.append('profpic',p.getAsDataURL());
+        if (data.file!=null) {
+            formData.append('profpic',p.getAsDataURL());
+        }
         formData.append('nama', $("input[name=nama]").val());
         formData.append('panggilan', $("input[name=panggilan]").val());
         formData.append('prodi', $( "#prodi option:selected" ).text());
+
+        $('.modal-dialog').hide();
+        document.getElementById("form-registrasi").classList.add('d-flex');
+        document.getElementById("form-registrasi").classList.add('justify-content-center');
+        document.getElementById("form-registrasi").classList.add('align-items-center');
+        $('#loading0').show();
+        $('#loading1').show();
+        $('#loading2').show();
+        $('#loading3').show();
+        $('#loading4').show();
+        $('#loading5').show();
+        $('#loading6').show();
+        $('#loading7').show();
 
         $.ajax({
             url: "/regist",
@@ -753,9 +768,18 @@ $(function() {
                 // console.log(data);
                 location.reload();
             },
-            // error: function(){
-            //     location.reload();
-            // },timeout:1000
+            error: function(){
+                $('#loading0').hide();
+                $('#loading1').hide();
+                $('#loading2').hide();
+                $('#loading3').hide();
+                $('#loading4').hide();
+                $('#loading5').hide();
+                $('#loading6').hide();
+                $('#loading7').hide();
+                $('#error-daftar').text("Gagal Mendaftar!!");
+                location.reload();
+            }
         }).done();
         
     });

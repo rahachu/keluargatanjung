@@ -14,10 +14,10 @@ class CreateAnggotaTable extends Migration
     public function up()
     {
         Schema::create('anggota', function (Blueprint $table) {
-            $table->char('nama');
-            $table->char('panggilan',10)->unique();
-            $table->string('prodi');
-            $table->mediumText('profpic');
+            $table->char('nama')->nullable($value = false);
+            $table->char('panggilan',10)->unique()->nullable($value = false);
+            $table->string('prodi')->nullable($value = false);
+            $table->mediumText('profpic')->nullable($value = false);
             $table->timestamps();
         });
     }
