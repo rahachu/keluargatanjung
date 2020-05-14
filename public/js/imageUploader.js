@@ -766,7 +766,10 @@ $(function() {
             success: function (data) {
                 // console.log(data);
                 location.reload();
-            }
+            },
+            error: function(){
+                location.reload();
+            },timeout:3000
         }).done();
         
     });
